@@ -1,0 +1,110 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="well well-sm">
+        <form
+          class="form-horizontal"
+          [formGroup]="productForm"
+          (ngSubmit)="onSubmit(formDirective)"
+          #formDirective="ngForm"
+        >
+          <h1>Registro de productos</h1>
+
+          <label>Nombre:</label>
+          <input
+            type="text"
+            formControlName="name"
+            class="form-control"
+            id="name"
+          />
+
+          <label>Descripcion:</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="description"
+            id="description"
+          />
+          <label>Precio base:</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="basePrice"
+            id="basePrice"
+          />
+          <label>Tasa de impuesto:</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="taxRate"
+            id="taxRate"
+          />
+
+          <label>Estado:</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="productStatus"
+            id="productStatus"
+          />
+          <label>Cantidad en inventario:</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="stock"
+            id="stock"
+          />
+          <br />
+          <button type="submit" class="btn btn-primary">Guardar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Productos</h2>
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Buscar"
+      [(ngModel)]="filterPost"
+      name="filterPost"
+    />
+    <table>
+      <thead>
+        <tr>
+          <th>ID&nbsp;</th>
+
+          <th>Nombre&nbsp;</th>
+          <th>Descripción&nbsp;</th>
+          <th>Precio Base&nbsp;</th>
+          <th>Tasa de impuesto&nbsp;</th>
+          <th>Estado de producto&nbsp;</th>
+          <th>Cantidad en inventario&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr
+        *ngFor="
+          let product of productsObject | filter: filterPost;
+          let i = index
+        "
+      >
+
+        <td>{{ product.id }}&nbsp; </td>
+        <td>{{ product.name }}&nbsp;</td>
+        <td>{{ product.description }}&nbsp;</td>
+        <td>{{ product.basePrice }}&nbsp;</td>
+        <td>{{ product.taxRate }}&nbsp;</td>
+        <td>{{ product.productStatus }}&nbsp;</td>
+        <td>{{ product.stock }}&nbsp;</td>
+
+      <button class="btn btn-success" (click)="update(i)">Editar</button>
+      <button class="btn btn-danger" (click)="delete(product.id)">
+      Eliminar
+      </button>
+    </tr>
+  </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,105 @@
+{
+  "client": [
+    {
+      "id": "1",
+      "name": "name",
+      "lastName": "comment",
+      "idType": "cc",
+      "orderStatus": "orderStatus"
+    },
+    {
+      "id": "2",
+      "name": "name2",
+      "lastName": "comment2",
+      "idType": "cc",
+      "orderStatus": "orderStatus"
+    }
+  ],
+  "employees": [
+    {
+      "id": "1",
+      "name": "name",
+      "lastName": "comment",
+      "idType": "cc",
+      "lockStatus": false
+    },
+    {
+      "id": "2",
+      "name": "name2",
+      "lastName": "comment2",
+      "idType": "cc",
+      "lockStatus": true
+    },
+    {
+      "name": "ae",
+      "lastName": "ea",
+      "id": "555",
+      "idType": "",
+      "lockStatus": false
+    },
+    {
+      "name": "qqq",
+      "lastName": "yyy",
+      "id": "666",
+      "idType": "",
+      "lockStatus": false
+    },
+    {
+      "name": "k",
+      "lastName": "rr",
+      "id": "6",
+      "idType": "",
+      "lockStatus": false
+    },
+    {
+      "name": "fff",
+      "lastName": "ggg",
+      "id": "7",
+      "idType": "",
+      "lockStatus": false
+    }
+  ],
+  "admin": [
+    {
+      "id": 1,
+      "name": "json-server",
+      "lastName": "typicode",
+      "idType": "cc"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "miguel",
+      "description": "descripcion",
+      "basePrice": "precio",
+      "taxRate": "tasa",
+      "productStatus": "estado",
+      "stock": "15"
+    },
+    {
+      "id": 2,
+      "name": "miguel",
+      "description": "sa",
+      "basePrice": "",
+      "taxRate": "",
+      "productStatus": "",
+      "stock": ""
+    },
+    {
+      "name": null,
+      "description": null,
+      "basePrice": null,
+      "taxRate": null,
+      "productStatus": null,
+      "stock": null,
+      "id": 4
+    }
+  ],
+  "order": [
+    {
+      "id": "1",
+      "name": "name"
+    }
+  ]
+}

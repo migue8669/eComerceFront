@@ -1,0 +1,62 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="well well-sm">
+        <form
+
+          #formDirective="ngForm"
+        >
+          <h1>Orden de producto</h1>
+
+          <label>Nombre:</label>
+          <input
+            type="text"
+            formControlName="name"
+            class="form-control"
+            id="name"
+          />
+
+          <label>Descripcion:</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="description"
+            id="description"
+          />
+          <label>Precio base:</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="basePrice"
+            id="basePrice"
+          />
+          <label>Tasa de impuesto:</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="taxRate"
+            id="taxRate"
+          />
+
+          <label>Estado:</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="productStatus"
+            id="productStatus"
+          />
+          <label>Cantidad en inventario:</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="stock"
+            id="stock"
+          />
+          <br />
+          <button type="submit" class="btn btn-primary">Guardar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>
